@@ -292,6 +292,55 @@ nav a {
   transform: scaleX(1);
 }
 
+/* mobile border-bottom venus color */
+.overview-mobile-btn.venus:after,
+.structure-mobile-btn.venus:after,
+.geology-mobile-btn.venus:after {
+  border-bottom: solid 3px var(--orange);
+}
+
+/* mobile border-bottom earth color */
+.overview-mobile-btn.earth:after,
+.structure-mobile-btn.earth:after,
+.geology-mobile-btn.earth:after {
+  border-bottom: solid 3px var(--earth);
+}
+
+/* mobile border-bottom mars color */
+.overview-mobile-btn.mars:after,
+.structure-mobile-btn.mars:after,
+.geology-mobile-btn.mars:after {
+  border-bottom: solid 3px var(--mars);
+}
+
+/* mobile border-bottom jupiter color */
+.overview-mobile-btn.jupiter:after,
+.structure-mobile-btn.jupiter:after,
+.geology-mobile-btn.jupiter:after {
+  border-bottom: solid 3px var(--jupiter);
+}
+
+/* mobile border-bottom saturn color */
+.overview-mobile-btn.saturn:after,
+.structure-mobile-btn.saturn:after,
+.geology-mobile-btn.saturn:after {
+  border-bottom: solid 3px var(--saturn);
+}
+
+/* mobile border-bottom uranus color */
+.overview-mobile-btn.uranus:after,
+.structure-mobile-btn.uranus:after,
+.geology-mobile-btn.uranus:after {
+  border-bottom: solid 3px var(--uranus);
+}
+
+/* mobile border-bottom neptune color */
+.overview-mobile-btn.neptune:after,
+.structure-mobile-btn.neptune:after,
+.geology-mobile-btn.neptune:after {
+  border-bottom: solid 3px var(--neptune);
+}
+
 /* .ghost-button:default:after {
   transform: scaleX(1);
 } */

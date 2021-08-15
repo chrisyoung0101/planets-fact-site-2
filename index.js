@@ -290,6 +290,8 @@ mobileBtnGeology.addEventListener('click', () => {
   geologyLink.style.display = 'inline';
 });
 
+// show underline border color for each planet
+
 // TABLET & DESKTOP
 
 // overview content
