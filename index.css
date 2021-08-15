@@ -680,6 +680,30 @@ p {
     background-color: var(--orange);
   }
 
+  .earth-color {
+    background-color: var(--earth);
+  }
+
+  .mars-color {
+    background-color: var(--mars);
+  }
+
+  .jupiter-color {
+    background-color: var(--jupiter);
+  }
+
+  .saturn-color {
+    background-color: var(--saturn);
+  }
+
+  .uranus-color {
+    background-color: var(--uranus);
+  }
+
+  .neptune-color {
+    background-color: var(--neptune);
+  }
+
   .mySelectedBackGroundColor {
     background-color: rgba(131, 131, 145, 0.4);
   }

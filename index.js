@@ -213,6 +213,449 @@ function venusLoad() {
   });
 }
 
+//earth
+
+function earthLoad() {
+  console.log('earth loaded');
+
+  const sideBtn1Earth = document.querySelector('.side-btn-1.earth-color');
+  const sideBtn2Earth = document.querySelector('.side-btn-2.earth-color');
+  const sideBtn3Earth = document.querySelector('.side-btn-3.earth-color');
+  //default
+  sideBtn1Earth.style.pointerEvents = 'none';
+  sideBtn1Earth.classList.add('earth-color');
+  sideBtn2Earth.classList.remove('earth-color');
+  sideBtn3Earth.classList.remove('earth-color');
+
+  //onmousedown remove background color or disable focus color
+  sideBtn3Earth.addEventListener('onmousedown', () => {
+    console.log('this is earth btn 3');
+    sideBtn3Earth.style.backgroundColor = 'red';
+    sideBtn3Earth.blur();
+  });
+  const clickedSideEarth = false;
+
+  sideBtn1Earth.addEventListener('click', (clickedSideEarth) => {
+    //console.log('hi mercury');
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.add('earth-color');
+      sideBtn1Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('earth-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('earth-color');
+      // sideBtn2Venus.style.backgroundColor = 'none';
+      sideBtn3Earth.classList.remove('earth-color');
+      sideBtn2Earth.blur();
+    }
+  });
+
+  sideBtn2Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('earth-color');
+      sideBtn1Earth.style.pointerEvents = 'initial';
+      sideBtn2Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.blur();
+      sideBtn2Earth.classList.add('earth-color');
+      sideBtn3Earth.classList.remove('earth-color');
+      sideBtn3Earth.style.pointerEvents = 'initial';
+    }
+  });
+
+  sideBtn3Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('earth-color');
+      sideBtn3Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('earth-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('earth-color');
+      sideBtn3Earth.blur();
+    }
+  });
+}
+
+//mars
+
+function marsLoad() {
+  console.log('mars loaded');
+
+  const sideBtn1Mars = document.querySelector('.side-btn-1.mars-color');
+  const sideBtn2Mars = document.querySelector('.side-btn-2.mars-color');
+  const sideBtn3Mars = document.querySelector('.side-btn-3.mars-color');
+  //default
+  sideBtn1Mars.style.pointerEvents = 'none';
+  sideBtn1Mars.classList.add('mars-color');
+  sideBtn2Mars.classList.remove('mars-color');
+  sideBtn3Mars.classList.remove('mars-color');
+
+  //onmousedown remove background color or disable focus color
+  sideBtn3Mars.addEventListener('onmousedown', () => {
+    console.log('this is mars btn 3');
+    sideBtn3Mars.style.backgroundColor = 'red';
+    sideBtn3Mars.blur();
+  });
+  const clickedSideEarth = false;
+
+  sideBtn1Mars.addEventListener('click', (clickedSideMars) => {
+    //console.log('hi mercury');
+    clickedSideMars = true;
+    if (clickedSideMars) {
+      sideBtn1Mars.classList.add('mars-color');
+      sideBtn1Mars.style.pointerEvents = 'none';
+      sideBtn2Mars.classList.remove('mars-color');
+      sideBtn2Mars.style.pointerEvents = 'initial';
+      sideBtn3Mars.classList.add('mars-color');
+      // sideBtn2Venus.style.backgroundColor = 'none';
+      sideBtn3Mars.classList.remove('mars-color');
+      sideBtn2Mars.blur();
+    }
+  });
+
+  sideBtn2Mars.addEventListener('click', (clickedSideMars) => {
+    clickedSideMars = true;
+    if (clickedSideMars) {
+      sideBtn1Mars.classList.remove('mars-color');
+      sideBtn1Mars.style.pointerEvents = 'initial';
+      sideBtn2Mars.style.pointerEvents = 'none';
+      sideBtn2Mars.blur();
+      sideBtn2Mars.classList.add('mars-color');
+      sideBtn3Mars.classList.remove('mars-color');
+      sideBtn3Mars.style.pointerEvents = 'initial';
+    }
+  });
+
+  sideBtn3Mars.addEventListener('click', (clickedSideMars) => {
+    clickedSideMars = true;
+    if (clickedSideMars) {
+      sideBtn1Mars.classList.remove('mars-color');
+      sideBtn3Mars.style.pointerEvents = 'none';
+      sideBtn2Mars.classList.remove('mars-color');
+      sideBtn2Mars.style.pointerEvents = 'initial';
+      sideBtn3Mars.classList.add('mars-color');
+      sideBtn3Mars.blMars;
+    }
+  });
+}
+
+//jupiter
+//note : keeping all sideBtn1Earth, etc naming here as we are just replacing that button with the color we want.
+//note : we did not do this for venus, earth, or mars but doing it for remaining here down.
+
+function jupiterLoad() {
+  console.log('jupiter loaded');
+
+  const sideBtn1Earth = document.querySelector('.side-btn-1.jupiter-color');
+  const sideBtn2Earth = document.querySelector('.side-btn-2.jupiter-color');
+  const sideBtn3Earth = document.querySelector('.side-btn-3.jupiter-color');
+  //default
+  sideBtn1Earth.style.pointerEvents = 'none';
+  sideBtn1Earth.classList.add('jupiter-color');
+  sideBtn2Earth.classList.remove('jupiter-color');
+  sideBtn3Earth.classList.remove('jupiter-color');
+
+  //onmousedown remove background color or disable focus color
+  sideBtn3Earth.addEventListener('onmousedown', () => {
+    console.log('this is jupiter btn 3');
+    sideBtn3Earth.style.backgroundColor = 'red';
+    sideBtn3Earth.blur();
+  });
+  const clickedSideEarth = false;
+
+  sideBtn1Earth.addEventListener('click', (clickedSideEarth) => {
+    //console.log('hi mercury');
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.add('jupiter-color');
+      sideBtn1Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('jupiter-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('jupiter-color');
+      // sideBtn2Venus.style.backgroundColor = 'none';
+      sideBtn3Earth.classList.remove('jupiter-color');
+      sideBtn2Earth.blur();
+    }
+  });
+
+  sideBtn2Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('jupiter-color');
+      sideBtn1Earth.style.pointerEvents = 'initial';
+      sideBtn2Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.blur();
+      sideBtn2Earth.classList.add('jupiter-color');
+      sideBtn3Earth.classList.remove('jupiter-color');
+      sideBtn3Earth.style.pointerEvents = 'initial';
+    }
+  });
+
+  sideBtn3Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('jupiter-color');
+      sideBtn3Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('jupiter-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('jupiter-color');
+      sideBtn3Earth.blur();
+    }
+  });
+}
+
+//saturn
+
+function saturnLoad() {
+  console.log('saturn loaded');
+
+  const sideBtn1Earth = document.querySelector('.side-btn-1.saturn-color');
+  const sideBtn2Earth = document.querySelector('.side-btn-2.saturn-color');
+  const sideBtn3Earth = document.querySelector('.side-btn-3.saturn-color');
+  //default
+  sideBtn1Earth.style.pointerEvents = 'none';
+  sideBtn1Earth.classList.add('saturn-color');
+  sideBtn2Earth.classList.remove('saturn-color');
+  sideBtn3Earth.classList.remove('saturn-color');
+
+  //onmousedown remove background color or disable focus color
+  sideBtn3Earth.addEventListener('onmousedown', () => {
+    console.log('this is saturn btn 3');
+    sideBtn3Earth.style.backgroundColor = 'red';
+    sideBtn3Earth.blur();
+  });
+  const clickedSideEarth = false;
+
+  sideBtn1Earth.addEventListener('click', (clickedSideEarth) => {
+    //console.log('hi mercury');
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.add('saturn-color');
+      sideBtn1Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('saturn-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('saturn-color');
+      // sideBtn2Venus.style.backgroundColor = 'none';
+      sideBtn3Earth.classList.remove('saturn-color');
+      sideBtn2Earth.blur();
+    }
+  });
+
+  sideBtn2Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('saturn-color');
+      sideBtn1Earth.style.pointerEvents = 'initial';
+      sideBtn2Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.blur();
+      sideBtn2Earth.classList.add('saturn-color');
+      sideBtn3Earth.classList.remove('saturn-color');
+      sideBtn3Earth.style.pointerEvents = 'initial';
+    }
+  });
+
+  sideBtn3Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('saturn-color');
+      sideBtn3Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('saturn-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('saturn-color');
+      sideBtn3Earth.blur();
+    }
+  });
+}
+
+//uranus
+
+function uranusLoad() {
+  console.log('uranus loaded');
+
+  const sideBtn1Earth = document.querySelector('.side-btn-1.uranus-color');
+  const sideBtn2Earth = document.querySelector('.side-btn-2.uranus-color');
+  const sideBtn3Earth = document.querySelector('.side-btn-3.uranus-color');
+  //default
+  sideBtn1Earth.style.pointerEvents = 'none';
+  sideBtn1Earth.classList.add('uranus-color');
+  sideBtn2Earth.classList.remove('uranus-color');
+  sideBtn3Earth.classList.remove('uranus-color');
+
+  //onmousedown remove background color or disable focus color
+  sideBtn3Earth.addEventListener('onmousedown', () => {
+    console.log('this is uranus btn 3');
+    sideBtn3Earth.style.backgroundColor = 'red';
+    sideBtn3Earth.blur();
+  });
+  const clickedSideEarth = false;
+
+  sideBtn1Earth.addEventListener('click', (clickedSideEarth) => {
+    //console.log('hi mercury');
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.add('uranus-color');
+      sideBtn1Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('uranus-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('uranus-color');
+      // sideBtn2Venus.style.backgroundColor = 'none';
+      sideBtn3Earth.classList.remove('uranus-color');
+      sideBtn2Earth.blur();
+    }
+  });
+
+  sideBtn2Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('uranus-color');
+      sideBtn1Earth.style.pointerEvents = 'initial';
+      sideBtn2Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.blur();
+      sideBtn2Earth.classList.add('uranus-color');
+      sideBtn3Earth.classList.remove('uranus-color');
+      sideBtn3Earth.style.pointerEvents = 'initial';
+    }
+  });
+
+  sideBtn3Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('uranus-color');
+      sideBtn3Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('uranus-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('uranus-color');
+      sideBtn3Earth.blur();
+    }
+  });
+}
+
+//neptune
+
+function neptuneLoad() {
+  console.log('neptune loaded');
+
+  const sideBtn1Earth = document.querySelector('.side-btn-1.neptune-color');
+  const sideBtn2Earth = document.querySelector('.side-btn-2.neptune-color');
+  const sideBtn3Earth = document.querySelector('.side-btn-3.neptune-color');
+  //default
+  sideBtn1Earth.style.pointerEvents = 'none';
+  sideBtn1Earth.classList.add('neptune-color');
+  sideBtn2Earth.classList.remove('neptune-color');
+  sideBtn3Earth.classList.remove('neptune-color');
+
+  //onmousedown remove background color or disable focus color
+  sideBtn3Earth.addEventListener('onmousedown', () => {
+    console.log('this is neptune btn 3');
+    sideBtn3Earth.style.backgroundColor = 'red';
+    sideBtn3Earth.blur();
+  });
+  const clickedSideEarth = false;
+
+  sideBtn1Earth.addEventListener('click', (clickedSideEarth) => {
+    //console.log('hi mercury');
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.add('neptune-color');
+      sideBtn1Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('neptune-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('neptune-color');
+      // sideBtn2Venus.style.backgroundColor = 'none';
+      sideBtn3Earth.classList.remove('neptune-color');
+      sideBtn2Earth.blur();
+    }
+  });
+
+  sideBtn2Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('neptune-color');
+      sideBtn1Earth.style.pointerEvents = 'initial';
+      sideBtn2Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.blur();
+      sideBtn2Earth.classList.add('neptune-color');
+      sideBtn3Earth.classList.remove('neptune-color');
+      sideBtn3Earth.style.pointerEvents = 'initial';
+    }
+  });
+
+  sideBtn3Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('neptune-color');
+      sideBtn3Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('neptune-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('neptune-color');
+      sideBtn3Earth.blur();
+    }
+  });
+}
+
+//earth
+
+function earthLoad() {
+  console.log('earth loaded');
+
+  const sideBtn1Earth = document.querySelector('.side-btn-1.earth-color');
+  const sideBtn2Earth = document.querySelector('.side-btn-2.earth-color');
+  const sideBtn3Earth = document.querySelector('.side-btn-3.earth-color');
+  //default
+  sideBtn1Earth.style.pointerEvents = 'none';
+  sideBtn1Earth.classList.add('earth-color');
+  sideBtn2Earth.classList.remove('earth-color');
+  sideBtn3Earth.classList.remove('earth-color');
+
+  //onmousedown remove background color or disable focus color
+  sideBtn3Earth.addEventListener('onmousedown', () => {
+    console.log('this is earth btn 3');
+    sideBtn3Earth.style.backgroundColor = 'red';
+    sideBtn3Earth.blur();
+  });
+  const clickedSideEarth = false;
+
+  sideBtn1Earth.addEventListener('click', (clickedSideEarth) => {
+    //console.log('hi mercury');
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.add('earth-color');
+      sideBtn1Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('earth-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('earth-color');
+      // sideBtn2Venus.style.backgroundColor = 'none';
+      sideBtn3Earth.classList.remove('earth-color');
+      sideBtn2Earth.blur();
+    }
+  });
+
+  sideBtn2Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('earth-color');
+      sideBtn1Earth.style.pointerEvents = 'initial';
+      sideBtn2Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.blur();
+      sideBtn2Earth.classList.add('earth-color');
+      sideBtn3Earth.classList.remove('earth-color');
+      sideBtn3Earth.style.pointerEvents = 'initial';
+    }
+  });
+
+  sideBtn3Earth.addEventListener('click', (clickedSideEarth) => {
+    clickedSideEarth = true;
+    if (clickedSideEarth) {
+      sideBtn1Earth.classList.remove('earth-color');
+      sideBtn3Earth.style.pointerEvents = 'none';
+      sideBtn2Earth.classList.remove('earth-color');
+      sideBtn2Earth.style.pointerEvents = 'initial';
+      sideBtn3Earth.classList.add('earth-color');
+      sideBtn3Earth.blur();
+    }
+  });
+}
+
 //SHOW - HIDE CONTENT : show image, show text, show link
 
 //mobile buttons
