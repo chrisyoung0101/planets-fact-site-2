@@ -562,7 +562,10 @@ p {
   }
 
   .hr2 {
-    margin-top: 3.75em;
+    position: relative;
+    top: 2px;
+    margin-left: -3em;
+    margin-right: -3em;
   }
 
   .dot {
@@ -579,16 +582,27 @@ p {
     border-top: none;
   }
 
+  /* nav.menu {
+    height: 0;
+  } */
+
   nav ul {
+    /* background-color: red; */
+    position: relative;
     display: flex;
     justify-content: space-around;
     transform: translateY(0);
-    height: 2em;
+    height: 3.7em;
+    top: 0;
     /* overflow: scroll; */
   }
 
   nav ul li {
     margin-top: -0.55em;
+  }
+
+  nav a {
+    border-bottom: none;
   }
 
   /* nav ul li a {
@@ -622,6 +636,35 @@ p {
 
   li:hover {
     opacity: 1;
+  }
+
+  /* note : using id as class selector not working - specificity issue? <-- did this get fixed? */
+  #venus-link:after {
+    border-bottom: solid 3px var(--orange);
+  }
+
+  #earth-link:after {
+    border-bottom: solid 3px var(--earth);
+  }
+
+  #mars-link:after {
+    border-bottom: solid 3px var(--mars);
+  }
+
+  #jupiter-link:after {
+    border-bottom: solid 3px var(--jupiter);
+  }
+
+  #saturn-link:after {
+    border-bottom: solid 3px var(--saturn);
+  }
+
+  #uranus-link:after {
+    border-bottom: solid 3px var(--uranus);
+  }
+
+  #neptune-link:after {
+    border-bottom: solid 3px var(--neptune);
   }
 
   .link-text {
@@ -830,6 +873,8 @@ p {
   }
 
   .hr2 {
+    position: unset;
+    top: unset;
     margin-top: -0.65em;
     margin-right: -5em;
     margin-left: -5em;
@@ -956,7 +1001,7 @@ p {
     opacity: 1;
   }
 
-  /* note : using id as class selector not working - specificity issue?  */
+  /* note : using id as class selector not working - specificity issue? <-- did this get fixed? */
   #venus-link:before {
     border-bottom: solid 3px var(--orange);
   }
