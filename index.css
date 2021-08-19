@@ -5,7 +5,12 @@
 
 1. Global Styles
 2. Typography
-3. Layout
+3. Layout aka basic HTML structure tags
+  3.1 container
+  3.2 div.header
+  3.3 nav.menu
+  3.4 section.content
+  3.5 section.infotangles
 4. Components
   4.1 images
   4.2 buttons
@@ -22,7 +27,9 @@
    4. Components
    ============= */
 
-/* 4.1 buttons */
+/* 4.1 images */
+/* 4.2 buttons */
+/* 4.3 infotangles */
 
 /* ================
    1. Global Styles
@@ -79,6 +86,24 @@ p.flex-text-item {
   display: none;
 }
 
+/* stopped here */
+/* =========
+   3. Layout
+   ========= */
+
+/*  3.1 container */
+
+.container {
+  margin: 1em 1.5em 1em 1.5em;
+  /* ??? */
+  height: calc(100% 2em);
+}
+
+/* 3.2 div.header */
+/* 3.3 nav.menu */
+/* 3.4 section.content */
+/* 3.5 section.infotangles */
+
 /* IMAGES */
 /* show - hide images */
 /* img.planet-img.structure-img,
@@ -108,20 +133,6 @@ img.planet-img.geology-img {
 .geology-link {
   display: none;
 }
-
-.container {
-  margin: 1em 1.5em 1em 1.5em;
-  /* ??? */
-  height: calc(100% 2em);
-}
-
-/* hr {
-  margin-left: -2em;
-  margin-right: -2em;
-  margin-top: 0;
-  color: rgba(131, 131, 145, 0.4);
-  color: yellowgreen;
-} */
 
 /* TODO : .hr1 & .hr2 are the same.  Consolidate. */
 .hr1 {
