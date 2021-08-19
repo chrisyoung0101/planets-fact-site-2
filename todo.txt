@@ -1,0 +1,6 @@
+Goal : List improvements or changes to the site
+
+organize index.css & index.js
+
+font-family should be CSS variables - global styles 
+

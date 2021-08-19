@@ -1,6 +1,33 @@
 /* font-family: 'Antonio', sans-serif; */
 /* font-family: 'Spartan', sans-serif; */
 
+/* Table of Contents - Sections
+
+1. Global Styles
+2. Typography
+3. Layout
+4. Components
+  4.1 images
+  4.2 buttons
+  4.3 infotangles
+
+
+*/
+
+/* =============
+   3. Layout
+   ============= */
+
+/* =============
+   4. Components
+   ============= */
+
+/* 4.1 buttons */
+
+/* ================
+   1. Global Styles
+   ================ */
+
 *,
 *:before,
 *:after {
@@ -37,9 +64,19 @@ body {
   /* overflow: hidden; */
 }
 
+/* =============
+   2. Typography
+   ============= */
+
 /* give p enough room to not jump with new text */
 p.flex-text-item {
   height: 10em;
+}
+
+/* show - hide content text */
+.structure-text,
+.geology-text {
+  display: none;
 }
 
 /* IMAGES */
@@ -63,16 +100,6 @@ img.planet-img.geology-img {
 }
 
 .structure-img {
-  display: none;
-}
-
-/* .overview-btn {
-  background-color: red;
-} */
-
-/* show - hide content text */
-.structure-text,
-.geology-text {
   display: none;
 }
 
