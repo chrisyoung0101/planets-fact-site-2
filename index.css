@@ -14,22 +14,7 @@
 4. Components
   4.1 images
   4.2 buttons
-  4.3 infotangles
-
-
 */
-
-/* =============
-   3. Layout
-   ============= */
-
-/* =============
-   4. Components
-   ============= */
-
-/* 4.1 images */
-/* 4.2 buttons */
-/* 4.3 infotangles */
 
 /* ================
    1. Global Styles
@@ -86,7 +71,12 @@ p.flex-text-item {
   display: none;
 }
 
-/* stopped here */
+.flex-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* =========
    3. Layout
    ========= */
@@ -100,17 +90,225 @@ p.flex-text-item {
 }
 
 /* 3.2 div.header */
+
+.header {
+  height: 2.8em;
+  display: flex;
+  margin-bottom: 0.5em;
+  justify-content: space-between;
+}
+
 /* 3.3 nav.menu */
+
+nav ul {
+  display: block;
+  margin-left: -0.5em;
+  margin-top: -1.5em;
+  /* list is to the right.  bring it left. not sure why it went right.  this is my hack */
+  /* margin-left: -2em; */
+  top: 4.5em;
+  left: 0;
+  width: 100%;
+  background-color: var(--black);
+  height: 100vh;
+  position: fixed;
+  list-style-type: none;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+}
+
+.menu ul:first-child {
+  margin-top: -0.5em;
+  padding-top: 1em;
+  border-top: 1px solid rgba(131, 131, 145, 0.4);
+}
+
+nav a {
+  margin: 0.3em 0 0.3em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.0625em;
+  /* last param of rgba is opacity */
+  border-bottom: 1px solid rgba(131, 131, 145, 0.4);
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 1.36364px;
+  /* line-height: 25px; */
+  text-transform: uppercase;
+}
+
+.menu-btn {
+  margin-top: 0.7em;
+  width: 1.5em;
+  height: 1.0625em;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.menu-text {
+  display: inline;
+}
+
+.dot {
+  content: '';
+  margin: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-mercury {
+  background-color: var(--white);
+}
+.dot-venus {
+  background-color: #f7cc7f;
+}
+.dot-earth {
+  background-color: #545bfe;
+}
+.dot-mars {
+  background-color: #ff6a45;
+}
+.dot-jupiter {
+  background-color: #ecad7a;
+}
+.dot-saturn {
+  background-color: #fccb6b;
+}
+.dot-uranus {
+  background-color: #65f0d5;
+}
+.dot-neptune {
+  background-color: #497efa;
+}
+
+.chevron {
+  display: inline-block;
+  /* margin: 0 1.5em 0 0; */
+  width: 0.4em;
+  height: 0.58em;
+  cursor: pointer;
+}
+
 /* 3.4 section.content */
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content .flex-item {
+  align-self: center;
+}
+
+.flex-content {
+  display: flex;
+}
+
+.side-btns {
+  display: none;
+}
+
+.content h1 {
+  margin: 0 0 0.2em 0;
+}
+
+.content p {
+  margin-bottom: 2.5em;
+}
+
+/* removes the underline from the link text  */
+.source {
+  text-decoration: none;
+  margin-bottom: 0.75em;
+}
+
+.source-text {
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: spartan;
+  opacity: 0.5;
+}
+
+.wikipedia {
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: spartan;
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+.flex-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.planet-img.flex-content-wrapper-item,
+.geology-img.flex-content-wrapper-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* mobile - overlap geology image over planet image */
+.geology-img.flex-content-wrapper-item {
+  margin-top: -6.6em;
+  width: 60px;
+  height: 73.25px;
+}
+
 /* 3.5 section.infotangles */
 
-/* IMAGES */
-/* show - hide images */
-/* img.planet-img.structure-img,
-img.planet-img.geology-img {
-  display: none;
-} */
+.infotangle:last-child {
+  margin-bottom: 2.5em;
+}
 
+.infotangle-container-flex {
+  margin-top: 1.25em;
+  margin-bottom: -0.6em;
+  margin-left: -0.75em;
+  margin-right: -0.75em;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ffffff55;
+  text-transform: uppercase;
+  height: 3.25em;
+}
+
+.infotangle-title {
+  margin-left: 2.25em;
+  margin-top: 2.25em;
+  color: var(--white);
+  font-size: 0.55rem;
+  font-weight: 700;
+  font-family: spartan;
+  letter-spacing: 0.727273px;
+  opacity: 0.5;
+}
+
+/* made it a span because styles were not being applied with a <p>  Global Style??? */
+.infotangle-content {
+  margin-top: 0.5em;
+  margin-right: 1.5em;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: Antonio;
+  /* letter-spacing: 0.75px; */
+}
+
+/* =============
+   4. Components
+   ============= */
+
+/* 4.1 images */
 .planet-img {
   margin-top: 5.5375em;
   margin-bottom: 5em;
@@ -154,86 +352,15 @@ img.planet-img.geology-img {
   z-index: 999;
 }
 
-.header {
-  height: 2.8em;
-  display: flex;
-  margin-bottom: 0.5em;
-  justify-content: space-between;
-}
-
 .logo {
   /* background-color: green; */
   margin-top: 0;
   padding: 0;
 }
 
-/* hide the menu */
-/* .menu {
-  display: none;
-} */
-
-.menu-btn {
-  margin-top: 0.7em;
-  width: 1.5em;
-  height: 1.0625em;
-  cursor: pointer;
-  opacity: 1;
-}
-
 .link {
   margin-right: 1.7em;
 }
-
-/* button.overview:focus {
-  background-color: red;
-} */
-
-/* menu nav */
-
-nav ul {
-  display: block;
-  margin-left: -0.5em;
-  margin-top: -1.5em;
-  /* list is to the right.  bring it left. not sure why it went right.  this is my hack */
-  /* margin-left: -2em; */
-  top: 4.5em;
-  left: 0;
-  width: 100%;
-  background-color: var(--black);
-  height: 100vh;
-  position: fixed;
-  list-style-type: none;
-  transform: translateX(100%);
-  transition: transform 0.3s;
-}
-
-.menu ul:first-child {
-  margin-top: -0.5em;
-  padding-top: 1em;
-  border-top: 1px solid rgba(131, 131, 145, 0.4);
-}
-
-nav a {
-  margin: 0.3em 0 0.3em 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 4.0625em;
-  /* last param of rgba is opacity */
-  border-bottom: 1px solid rgba(131, 131, 145, 0.4);
-  color: var(--white);
-  text-decoration: none;
-  font-family: 'Spartan', sans-serif;
-  font-weight: 600;
-  font-size: 0.9375rem;
-  letter-spacing: 1.36364px;
-  /* line-height: 25px; */
-  text-transform: uppercase;
-}
-
-/* ul:last-child li:last-child a {
-  border-bottom: none;
-} */
 
 .link-text {
   margin-top: 0.25em;
@@ -244,53 +371,7 @@ nav a {
   flex-grow: 1;
 }
 
-.dot {
-  content: '';
-  margin: 0;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.dot-mercury {
-  background-color: var(--white);
-}
-.dot-venus {
-  background-color: #f7cc7f;
-}
-.dot-earth {
-  background-color: #545bfe;
-}
-.dot-mars {
-  background-color: #ff6a45;
-}
-.dot-jupiter {
-  background-color: #ecad7a;
-}
-.dot-saturn {
-  background-color: #fccb6b;
-}
-.dot-uranus {
-  background-color: #65f0d5;
-}
-.dot-neptune {
-  background-color: #497efa;
-}
-
-.menu-text {
-  display: inline;
-}
-
-.chevron {
-  display: inline-block;
-  /* margin: 0 1.5em 0 0; */
-  width: 0.4em;
-  height: 0.58em;
-  cursor: pointer;
-}
-
-/* buttons */
+/* 4.2 buttons */
 
 .buttons {
   display: flex;
@@ -430,124 +511,6 @@ p {
   text-align: center;
 }
 
-/* section.content */
-
-.content {
-  display: flex;
-  flex-direction: column;
-}
-
-.content .flex-item {
-  align-self: center;
-}
-
-.flex-content {
-  display: flex;
-}
-
-.flex-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.side-btns {
-  display: none;
-}
-
-.content h1 {
-  margin: 0 0 0.2em 0;
-}
-
-.content p {
-  margin-bottom: 2.5em;
-}
-
-/* removes the underline from the link text  */
-.source {
-  text-decoration: none;
-  margin-bottom: 0.75em;
-}
-
-/* kept  */
-.source-text {
-  color: var(--white);
-  font-size: 0.75rem;
-  font-weight: 400;
-  font-family: spartan;
-  opacity: 0.5;
-}
-
-.wikipedia {
-  color: var(--white);
-  font-size: 0.75rem;
-  font-weight: 700;
-  font-family: spartan;
-  opacity: 0.5;
-  text-decoration: underline;
-}
-
-.infotangle:last-child {
-  margin-bottom: 2.5em;
-}
-
-.infotangle-container-flex {
-  margin-top: 1.25em;
-  margin-bottom: -0.6em;
-  margin-left: -0.75em;
-  margin-right: -0.75em;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #ffffff55;
-  text-transform: uppercase;
-  height: 3.25em;
-}
-
-.infotangle-title {
-  margin-left: 2.25em;
-  margin-top: 2.25em;
-  color: var(--white);
-  font-size: 0.55rem;
-  font-weight: 700;
-  font-family: spartan;
-  letter-spacing: 0.727273px;
-  opacity: 0.5;
-}
-
-/* made it a span because styles were not being applied with a <p>  Global Style??? */
-.infotangle-content {
-  margin-top: 0.5em;
-  margin-right: 1.5em;
-  color: var(--white);
-  font-size: 1.25rem;
-  font-weight: 400;
-  font-family: Antonio;
-  /* letter-spacing: 0.75px; */
-}
-
-/* this should go with content stuff */
-
-/* TD this has affected mobile & desktop now.  */
-
-.flex-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.planet-img.flex-content-wrapper-item,
-.geology-img.flex-content-wrapper-item {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* mobile - overlap geology image over planet image */
-.geology-img.flex-content-wrapper-item {
-  margin-top: -6.6em;
-  width: 60px;
-  height: 73.25px;
-}
-
 /* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
 /* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
 /* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
@@ -619,10 +582,6 @@ p {
     /* padding-top: 1em; */
     border-top: none;
   }
-
-  /* nav.menu {
-    height: 0;
-  } */
 
   nav ul {
     /* background-color: red; */
