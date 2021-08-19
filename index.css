@@ -14,6 +14,12 @@
 4. Components
   4.1 images
   4.2 buttons
+  4.3 links
+  4.4 other
+
+5. Tablet 
+
+6. Desktop
 */
 
 /* ================
@@ -75,6 +81,33 @@ p.flex-text-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  color: var(--white);
+  font-weight: 400;
+  font-family: 'Antonio', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* h2 not inline with figma.  ok. */
+h2 {
+  color: var(--white);
+  font-weight: 400;
+  font-family: 'Antonio', sans-serif;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--white);
+  font-weight: 400;
+  font-family: 'Spartan', sans-serif;
+  font-size: 0.6875rem;
+  /* text-transform: uppercase; */
+  line-height: 179%;
+  text-align: center;
 }
 
 /* =========
@@ -326,51 +359,6 @@ nav a {
   display: none;
 }
 
-/* show - hide link type */
-.structure-link,
-.geology-link {
-  display: none;
-}
-
-/* TODO : .hr1 & .hr2 are the same.  Consolidate. */
-.hr1 {
-  margin-left: -2em;
-  margin-right: -2em;
-  margin-top: -0.35em;
-  border-top: 1px solid rgba(131, 131, 145, 0.4);
-  border-bottom: none;
-  z-index: 999;
-}
-
-.hr2 {
-  /* background-color: red; */
-  margin-left: -2em;
-  margin-right: -2em;
-  margin-top: -0.35em;
-  border-top: 1px solid rgba(131, 131, 145, 0.4);
-  border-bottom: none;
-  z-index: 999;
-}
-
-.logo {
-  /* background-color: green; */
-  margin-top: 0;
-  padding: 0;
-}
-
-.link {
-  margin-right: 1.7em;
-}
-
-.link-text {
-  margin-top: 0.25em;
-  margin-left: 2em;
-  /* dot and chevron are flex-grow:0 
-  & this is flex-grow: 1 so I guess it takes
-  up all remaining spece? */
-  flex-grow: 1;
-}
-
 /* 4.2 buttons */
 
 .buttons {
@@ -460,14 +448,6 @@ nav a {
   border-bottom: solid 3px var(--neptune);
 }
 
-/* .ghost-button:default:after {
-  transform: scaleX(1);
-} */
-
-/* .ghost-button:hover:after {
-  transform: scaleX(1);
-} */
-
 .ghost-button:hover {
   opacity: 1;
 }
@@ -476,39 +456,53 @@ nav a {
   transform: var(--transvalue);
 }
 
-/* .ghost-button:focus:after {
-  transform: scaleX(1);
-} */
+/* 4.3 links */
 
-/* .planet-img {
-  width: 6.9375em;
-} */
-
-h1 {
-  color: var(--white);
-  font-weight: 400;
-  font-family: 'Antonio', sans-serif;
-  font-size: 2.5rem;
-  text-transform: uppercase;
+/* show - hide link type */
+.structure-link,
+.geology-link {
+  display: none;
 }
 
-/* h2 not inline with figma.  ok. */
-h2 {
-  color: var(--white);
-  font-weight: 400;
-  font-family: 'Antonio', sans-serif;
-  font-size: 1.75rem;
-  text-transform: uppercase;
+.link {
+  margin-right: 1.7em;
 }
 
-p {
-  color: var(--white);
-  font-weight: 400;
-  font-family: 'Spartan', sans-serif;
-  font-size: 0.6875rem;
-  /* text-transform: uppercase; */
-  line-height: 179%;
-  text-align: center;
+.link-text {
+  margin-top: 0.25em;
+  margin-left: 2em;
+  /* dot and chevron are flex-grow:0 
+  & this is flex-grow: 1 so I guess it takes
+  up all remaining spece? */
+  flex-grow: 1;
+}
+
+/* 4.4 other */
+
+/* TODO : .hr1 & .hr2 are the same.  Consolidate. */
+.hr1 {
+  margin-left: -2em;
+  margin-right: -2em;
+  margin-top: -0.35em;
+  border-top: 1px solid rgba(131, 131, 145, 0.4);
+  border-bottom: none;
+  z-index: 999;
+}
+
+.hr2 {
+  /* background-color: red; */
+  margin-left: -2em;
+  margin-right: -2em;
+  margin-top: -0.35em;
+  border-top: 1px solid rgba(131, 131, 145, 0.4);
+  border-bottom: none;
+  z-index: 999;
+}
+
+.logo {
+  /* background-color: green; */
+  margin-top: 0;
+  padding: 0;
 }
 
 /* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
@@ -518,7 +512,8 @@ p {
 /* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
 /* TABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLETTABLET */
 
-/* tablet */
+/* 5. Tablet  */
+
 @media only screen and (min-width: 768px) {
   /* remove scroll */
   body {
@@ -704,17 +699,9 @@ p {
     background-color: rgba(131, 131, 145, 0.4);
   }
 
-  /* .myBackGroundColor {
-    background-color: var(--skyblue);
-  } */
-
   .mercury-color {
     background-color: var(--skyblue);
   }
-
-  /* .myBackGroundColorVenus {
-    background-color: var(--orange);
-  } */
 
   .venus-color {
     background-color: var(--orange);
@@ -850,7 +837,8 @@ p {
 /* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
 /* DESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOPDESKTOP */
 
-/* desktop */
+/* 6. Desktop */
+
 @media only screen and (min-width: 1440px) {
   /* bring back the scroll */
   body {
@@ -878,9 +866,7 @@ p {
   }
 
   .logo {
-    /* background-color: red; */
     margin-top: -0.25em;
-    /* margin-bottom: -1em; */
   }
 
   /* desktop - overlap geology image over planet image */
@@ -888,7 +874,7 @@ p {
     position: absolute;
     top: 700px;
     left: 365px;
-    /* background-color: blue; */
+
     margin-top: -16.5em;
     width: 163px;
     height: 199px;
@@ -896,8 +882,6 @@ p {
 
   .planet-img {
     position: absolute;
-    /* margin-top: 10em;
-    margin-bottom: 10em; */
     width: 18.125em;
     left: 300px;
   }
@@ -905,7 +889,6 @@ p {
   /* section content */
   div.flex-content {
     display: flex;
-    /* background-color: red; */
     flex-direction: column;
     width: fit-content;
     position: absolute;
@@ -915,14 +898,12 @@ p {
   }
 
   div.flex-text.flex-content-item {
-    /* background-color: red; */
     margin: 0;
   }
 
   .side-btn-1,
   .side-btn-2,
   .side-btn-3 {
-    /* background-color: orange; */
     width: 100%;
   }
 
@@ -932,10 +913,6 @@ p {
     background-color: rgba(131, 131, 145, 0.4);
     border: black;
   }
-
-  /* .side-btn-1 {
-    background-color: var(--skyblue);
-  } */
 
   .myBackGroundColor {
     background-color: var(--skyblue);
@@ -950,15 +927,6 @@ p {
     background-color: var(--skyblue);
   }
 
-  /* note : the nav - we are using .menu and nav ul.  Why?  and how do they behave differently? */
-
-  /* nav,
-  nav ul,
-  nav li,
-  a.link {
-    all: initial;
-  } */
-
   .menu ul:first-child {
     all: initial;
   }
@@ -970,7 +938,6 @@ p {
   }
 
   a.link {
-    /* margin: 0em 1em 1em 1em; */
     margin: 0.25em 1em 1em 1em;
     border-bottom: none;
   }
@@ -985,7 +952,7 @@ p {
     position: relative;
     margin: 0;
     border-bottom: solid 3px var(--skyblue);
-    /* border-top: solid 3px orange; */
+
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
   }
@@ -998,7 +965,6 @@ p {
     opacity: 1;
   }
 
-  /* note : using id as class selector not working - specificity issue? <-- did this get fixed? */
   #venus-link:before {
     border-bottom: solid 3px var(--orange);
   }
@@ -1047,8 +1013,6 @@ p {
 
   .infotangle {
     position: absolute;
-    /* why does bottom not work? */
-    /* bottom: 0px; */
     top: 700px;
     margin-left: 5em;
     width: 90%;
@@ -1086,7 +1050,6 @@ p {
     font-size: 1.25rem;
     font-weight: 400;
     font-family: Antonio;
-    /* letter-spacing: 0.75px; */
   }
 
   .infotangle-container-flex {
