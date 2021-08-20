@@ -1,6 +1,10 @@
+//=========================================================
+//Menu Btn aka Hamburger show/hide the mobile menu behavior
+//=========================================================
+
 // menu-btn
 
-// Code for hiding / showing the menu however we really don't need this functionality
+// Code for hiding / note : this might be overkill
 const menuBtn = document.querySelector('.menu-btn');
 const menuBtnShow = document.querySelector('.show');
 const menu = document.querySelector('nav ul');
@@ -27,6 +31,7 @@ menuBtn.addEventListener('click', () => {
 
   // console.log(theCSSprop);
 
+  // when menuBtn aka hamburger is clicked, check the value of x (matrix value 4 = translateX value).  If it is > 0 (your menu is showing) then hide the menu else show the menu
   if (x > 0) {
     menu.style.transform = 'translateX(0)';
     menuBtn.style.opacity = '24.87%';
@@ -43,6 +48,10 @@ menuBtn.addEventListener('click', () => {
     infotangle.style.display = 'block';
   }
 });
+
+//=====================================================================
+// Adding a bottom border to mobile overview, structure, & surface btns
+//=====================================================================
 
 // ************* MOBILE **************
 //below js : most likely this could be simpler but...
@@ -96,6 +105,13 @@ function clickHandler(event) {
 }
 
 // ************* TABLE & DESKTOP **************
+//===============================================================================
+// Adding a bottom border to TABLE & DESKTOP overview, structure, & surface btns
+//===============================================================================
+// note : guess this is an example of bloated js.  Each planet has it's own js but certainly there is a way to loop through a list of properties
+//        or something to make less code. However, for now we have this.
+// note : remaining issue is that the click behavior is not 100% what we want in regards to showing the targeted color for each btn and/or
+//        the btn flashes the wrong color when clicking.
 
 function mercuryLoad() {
   console.log('mercury loaded');
@@ -106,9 +122,6 @@ function mercuryLoad() {
   //disable hover - note : this disables js events on this element.  click events
   //will actually fall through to the next element (whatever that means).
   // sideBtn1.style.pointerEvents = 'none';
-
-  //thoughts :
-  //if btn with unique class is clicked change the background color accordingly
 
   //default
   sideBtn1Mercury.style.pointerEvents = 'none';
@@ -656,37 +669,40 @@ function earthLoad() {
   });
 }
 
+//==================================================================================================================
+// Show / hide behavior for the content when clicking overview, structure, & surface btns in mobile, tablet, desktop
+//==================================================================================================================
+// note : tablet underline color seems to flash when clicked. Remove or shorten the transition on the bottom border?
+
 //SHOW - HIDE CONTENT : show image, show text, show link
 
-//mobile buttons
+//******** select mobile buttons ********
 
 const mobileBtnOverview = document.querySelector('.overview-mobile-btn');
 const mobileBtnStructure = document.querySelector('.structure-mobile-btn');
 const mobileBtnGeology = document.querySelector('.geology-mobile-btn');
 
-// mobileBtnOverview.style.background = 'red';
-
-//tablet and desktop "side" buttons
+//*********** select tablet and desktop "side" buttons **********
 const sideBtnOverview = document.querySelector('.side-btn-1');
 const sideBtnStructure = document.querySelector('.side-btn-2');
 const sideBtnGeology = document.querySelector('.side-btn-3');
 
-//content text
+//select content text
 const overviewContent = document.querySelector('.overview-text');
 const structureContent = document.querySelector('.structure-text');
 const geologyContent = document.querySelector('.geology-text');
 
-//content img
+//select content img
 const overviewImg = document.querySelector('.overview-img');
 const structureImg = document.querySelector('.structure-img');
 const geologyImg = document.querySelector('.geology-img');
 
-//content wikipedia link
+//select content wikipedia link
 const overviewLink = document.querySelector('.overview-link');
 const structureLink = document.querySelector('.structure-link');
 const geologyLink = document.querySelector('.geology-link');
 
-// MOBILE
+// ***** MOBILE show / hide behavior ******
 
 // overview content
 mobileBtnOverview.addEventListener('click', () => {
@@ -735,7 +751,7 @@ mobileBtnGeology.addEventListener('click', () => {
 
 // show underline border color for each planet
 
-// TABLET & DESKTOP
+// ************ TABLET & DESKTOP ************
 
 // overview content
 sideBtnOverview.addEventListener('click', () => {
